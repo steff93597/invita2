@@ -167,3 +167,31 @@ main {
   display: block !important; /* Forzar visibilidad */
   opacity: 1 !important; /* Forzar opacidad */
 }
+/* ... (resto del CSS existente) ... */
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+  .paper {
+    width: 90%; /* Ajusta al 90% del ancho de la pantalla */
+    margin-right: 3px; /* Mantiene el margen a la derecha */
+    font-size: 0.8rem; /* Reduce un poco más el tamaño si es necesario */
+    height: auto; /* Permite que la altura se ajuste al contenido */
+  }
+
+  .event-info {
+    width: 90%; /* Ajusta al 90% del ancho de la pantalla */
+    font-size: 0.7rem; /* Reduce el tamaño para que quepa */
+    padding: 0.5rem; /* Reduce el padding para ahorrar espacio */
+  }
+
+  main {
+    gap: 1rem; /* Reduce el espacio entre elementos */
+    padding: 1rem; /* Añade padding para evitar recortes en los bordes */
+  }
+
+  .options {
+    gap: 1.5rem; /* Reduce el espacio entre botones */
+  }
+}
+
+/* ... (resto del CSS existente) ... */
