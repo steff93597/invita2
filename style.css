@@ -21,6 +21,7 @@ svg {
 body {
   margin: 0;
   min-height: 100dvh;
+  background-color: #adf8ad;
 }
 
 h1,
@@ -34,14 +35,10 @@ p {
 }
 
 /* styles */
-body {
-  background-color: #adf8ad;
-}
-
 main {
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* Reducido de 3rem a 2rem */
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -53,48 +50,47 @@ main {
 
 .cover {
   position: absolute;
-  border-left: 150px solid black; /* Reducido de 200px */
-  border-right: 150px solid black; /* Reducido de 200px */
-  border-top: 75px solid #1efa29; /* Reducido de 100px */
-  border-bottom: 75px solid #1efa29; /* Reducido de 100px */
+  border-left: 150px solid black;
+  border-right: 150px solid black;
+  border-top: 75px solid #1efa29;
+  border-bottom: 75px solid #1efa29;
   transition: transform .75s;
   transform-origin: top;
 }
 
 .paper {
   position: absolute;
-  padding: 1rem; /* Reducido de 1.5rem */
-  line-height: 1.5rem; /* Reducido de 2rem */
-  right: 3px; /* Reducido de 5px */
+  padding: 1rem;
+  line-height: 1.5rem;
+  right: 3px;
   z-index: -1;
   background: white;
-  width: 294px; /* Reducido de 390px (proporcional a los bordes) */
-  height: 135px; /* Reducido de 180px */
+  width: 294px;
+  height: 135px;
   transition: all .75s;
-}
-.paper {
   text-align: center;
 }
+
 .letter {
-  border-left: 150px solid black; /* Reducido de 200px */
-  border-right: 150px solid black; /* Reducido de 200px */
-  border-top: 75px solid transparent; /* Reducido de 100px */
-  border-bottom: 75px solid #1efa29; /* Reducido de 100px */
+  border-left: 150px solid black;
+  border-right: 150px solid black;
+  border-top: 75px solid transparent;
+  border-bottom: 75px solid #1efa29;
 }
 
 .options {
   display: flex;
-  gap: 3rem; /* Reducido de 5rem */
+  gap: 3rem;
 
   & button {
     color: black;
     font-weight: 600;
     border-radius: 3px;
     background: gray;
-    padding: 0.3rem 0.7rem; /* Reducido de 0.5rem 1rem */
+    padding: 0.3rem 0.7rem;
     border: 1px solid black;
     cursor: pointer;
-    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    font-size: 0.9rem;
   }
 
   & button:hover {
@@ -117,7 +113,7 @@ main {
   }
   100% {
     top: -90px;
-    height: 150px; /* Aumenta este valor si es necesario */
+    height: 150px;
   }
 }
 
@@ -127,7 +123,7 @@ main {
 
 @keyframes closePaper {
   0% {
-    top: -90px; /* Reducido de -120px */
+    top: -90px;
   }
   100% {
     top: 0;
@@ -136,11 +132,11 @@ main {
 
 .heart {
   position: absolute;
-  top: 25%; /* Mantenido para centrar verticalmente */
-  left: 46.5%; /* Mantenido para centrar horizontalmente */
+  top: 25%;
+  left: 46.5%;
   margin: auto;
-  width: 20px; /* Reducido de 30px */
-  height: 20px; /* Reducido de 30px */
+  width: 20px;
+  height: 20px;
   display: block;
   animation: crecer 2s forwards;
 }
@@ -151,7 +147,23 @@ main {
     opacity: 1;
   }
   100% {
-    scale: 2.5; /* Reducido de 3 para mantener proporción */
+    scale: 2.5;
     opacity: 0;
   }
+}
+
+.event-info {
+  text-align: center;
+  padding: 1rem;
+  background: #adf8ad;
+  width: 294px;
+  margin: 0 auto;
+  display: none; /* Estilo inicial */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.event-info.visible {
+  display: block !important; /* Forzar visibilidad */
+  opacity: 1 !important; /* Forzar opacidad */
 }
