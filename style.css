@@ -155,17 +155,25 @@ main {
 .event-info {
   text-align: center;
   padding: 1rem;
-  background: #adf8ad;
+  background: white;
   width: 294px;
   margin: 0 auto;
-  display: none; /* Estilo inicial */
+  display: none;
   opacity: 0;
   transition: opacity 0.5s;
+  font-size: 0.8rem; /* Como ajustamos antes */
 }
 
 .event-info.visible {
-  display: block !important; /* Forzar visibilidad */
-  opacity: 1 !important; /* Forzar opacidad */
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Añade esto dentro de la media query si es necesario */
+@media (max-width: 600px) {
+  .event-info {
+    margin-top: 1rem; /* Espacio adicional debajo de los botones */
+  }
 }
 /* ... (resto del CSS existente) ... */
 
