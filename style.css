@@ -69,8 +69,8 @@ main {
   height: 135px;
   transition: all .75s;
   text-align: center;
+  font-size: 0.9rem; /* Reducido de ~16px (predeterminado) a 0.9rem (14.4px aproximadamente) */
 }
-
 .letter {
   border-left: 150px solid black;
   border-right: 150px solid black;
